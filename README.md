@@ -1,8 +1,10 @@
 # @dmytri/speckit-opencode-plugin
 
-OpenCode plugin for spec-kit/specify workflow - specification-driven development.
+[OpenCode](https://opencode.ai) plugin for [spec-kit](https://github.com/github/spec-kit) workflow - specification-driven development.
 
 ## Installation
+
+See [OpenCode Plugins](https://opencode.ai/docs/plugins/) for full documentation.
 
 Add to your `opencode.json`:
 
@@ -16,7 +18,7 @@ OpenCode will automatically install the plugin on next start.
 
 ## Requirements
 
-[specify CLI](https://speckit.org) must be installed. See [speckit.org](https://speckit.org/#quick-start) for installation instructions:
+[specify CLI](https://github.com/github/spec-kit) must be installed. See [speckit.org](https://speckit.org/#quick-start) for installation instructions:
 
 ```bash
 # Install with uv (recommended)
