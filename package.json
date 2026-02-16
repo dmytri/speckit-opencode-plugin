@@ -1,0 +1,11 @@
+{
+  "name": "@dmytri/speckit-opencode-plugin",
+  "version": "0.1.0",
+  "description": "OpenCode plugin for spec-kit/specify workflow - specification-driven development",
+  "main": "speckit.ts",
+  "keywords": ["opencode", "plugin", "spec-kit", "specify", "specification-driven-development"],
+  "license": "MIT",
+  "dependencies": {
+    "@opencode-ai/plugin": "*"
+  }
+}
