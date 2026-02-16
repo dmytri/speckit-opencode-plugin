@@ -46,9 +46,9 @@ After initialization, the agent uses slash commands for each phase:
 2. `/speckit.specify` - Define requirements
 3. `/speckit.plan` - Create technical plan
 4. `/speckit.tasks` - Break into tasks
-5. `/speckit.implement`Use ` - Execute tasks
+5. `/speckit.implement` - Execute tasks
 
-speckit({ action: "phase" })` to check current progress and get guidance on what's next.
+Use `speckit({ action: "phase" })` to check current progress and get guidance on what's next.
 
 ## How It Works
 
