@@ -33,18 +33,26 @@ The plugin will notify you if `specify` is not installed.
 ## Usage
 
 ```typescript
-speckit({ action: "check" })                    // Verify specify CLI installed
-speckit({ action: "new", feature: "feature-name" })  // Create new feature branch
-speckit({ action: "status" })                    // Check current phase (auto-initializes .specify/)
-speckit({ action: "test" })                      // Run unit tests
-speckit({ action: "test", testType: "e2e" })    // Run e2e tests
-speckit({ action: "context" })                   // Sync agent context
+speckit({ action: "init" })        // Initialize spec-kit in current project (auto-runs on first use)
+speckit({ action: "check" })       // Verify specify CLI and tools installed
+speckit({ action: "phase" })       // Check current workflow phase and guidance
 ```
 
-The plugin auto-initializes `.specify/` directory on first use via `specify init`.
+### Workflow
+
+After initialization, the agent uses slash commands for each phase:
+
+1. `/speckit.constitution` - Create project principles
+2. `/speckit.specify` - Define requirements
+3. `/speckit.plan` - Create technical plan
+4. `/speckit.tasks` - Break into tasks
+5. `/speckit.implement`Use ` - Execute tasks
+
+speckit({ action: "phase" })` to check current progress and get guidance on what's next.
 
 ## How It Works
 
-- Agent uses plugin tool for all spec-kit operations (never uses CLI directly)
-- Plugin uses `specify` CLI for initialization and checks
-- Plugin uses project scripts (`.specify/scripts/bash/`) for workflow operations
+- Agent uses plugin tool for spec-kit operations (never uses CLI directly)
+- Plugin auto-initializes `.specify/` via `specify init`
+- Plugin provides phase tracking and workflow guidance
+- Slash commands (loaded from `.specify/templates/commands/`) drive the actual workflow
