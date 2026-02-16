@@ -16,9 +16,15 @@ OpenCode will automatically install the plugin on next start.
 
 ## Requirements
 
-- [specify CLI](https://github.com/qq542vev/specify) must be installed:
-  - `pip install specify-cli` (PyPI)
-  - `brew install specify` (Homebrew)
+[specify CLI](https://speckit.org) must be installed. See [speckit.org](https://speckit.org/#quick-start) for installation instructions:
+
+```bash
+# Install with uv (recommended)
+uv tool install specify-cli --from git+https://github.com/github/spec-kit.git
+
+# Verify installation
+specify --version
+```
 
 The plugin will notify you if `specify` is not installed.
 
